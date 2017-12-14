@@ -75,10 +75,7 @@ end
 end
 
 def winner(board)
-    if won?(board).is_a?(Array)
-    combo = won?(board)
-    return board[combo[0]]
-  else
-    nil
+  if winning_combo = won?(board)
+    board[winning_combo.first]
   end
 end
